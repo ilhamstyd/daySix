@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ilham Web</title>
-
-    <!-- icon -->
-    <link rel="website icon" type="jpg" href="./assets/images/logo.png">
+    <title>Personal Web</title>
+    <link rel="website icon" href="./assets/images/logo.png"/>
 
     <!-- font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-   
+
     <!-- style css -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -29,29 +27,24 @@
         <div class="left-nav">
             <img src="./assets/images/logo.png" alt="">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="addProject.html">My Project</a></li>
-                <!-- <li><a href="testimoni.html">Testimonial</a></li> -->
-
+                <li class="item-collapse"><a href="index.html" class="active">Home</a></li>
+                <li class="item-collapse"><a href="addProject.html">My Project</a></li>
             </ul>
         </div>
     
-        <div class="right-nav">
+        <div class="right-nav item-collapse" >
             <a href="contact-me.html">Contact Me</a>
         </div>
-
-        <button onclick="showHamburger()" id="open">
-            <i class="fa fa-bars"></i>
-        </button>
+        <div class="nav-right" id="barsmenu">
+            <button onclick="openHamburger()"> <i class="fa-2x fa-solid fa-bars"></i></button>
+        </div>
     </nav>
 
-    <!-- Hamburger menu -->
-    
-    <div class="container-hamburger" id="container-hamburger">
-        <a href="index.html">Home</a>
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a href="index.html" class="hamburger-active">Home</a>
         <a href="addProject.html">My Project</a>
         <a href="contact-me.html">Contact</a>
-    </div>
+      </div>
     <!-- end navbar -->
 
     <div class="container">
@@ -61,8 +54,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus assumenda rem commodi eveniet exercitationem, reprehenderit atque numquam consequuntur dignissimos rerum voluptatum ipsum! Ipsa, ipsum repellendus aspernatur ratione consequuntur natus placeat!Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus assumenda rem commodi eveniet exercitationem, reprehenderit atque numquam consequuntur dignissimos rerum voluptatum ipsum! Ipsa, ipsum repellendus aspernatur ratione consequuntur natus placeat!</p>
                 <div class="cv">
                     <a href="contact-me.html" id="contact">contact</a>
-                    <a href="contact-me.html">
-                        <p>download CV<i class="fa fa-download" style="padding-left: 10px;"></i></p>    
+                    <a href="contact-me.html">download CV<i class="fa fa-download"></i>
                     </a>
                 </div>
                 
@@ -89,8 +81,7 @@
             </div>
         </div>
     </div>
-
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/coba-coba.js"></script>
     <script src="./assets/js/navbar.js"></script>
 </body>
 </html>

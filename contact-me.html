@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ilham | Contact Me</title>
+    <title>Personal Web | Contact Me</title>
 
-    <!-- icon -->
-    <link rel="website icon" type="jpg" href="./assets/images/logo.png">
-
+    <!-- web icon -->
+    <link rel="website icon" href="./assets/images/logo.png">
 
     <!-- font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -30,27 +29,28 @@
         <div class="left-nav">
             <img src="./assets/images/logo.png" alt="">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="addProject.html">My Project</a></li>
+                <li class="item-collapse"><a href="index.html" class="active">Home</a></li>
+                <li class="item-collapse"><a href="addProject.html">My Project</a></li>
             </ul>
         </div>
-
-        <div class="right-nav">
+    
+        <div class="right-nav item-collapse" >
             <a href="contact-me.html">Contact Me</a>
         </div>
-        <button onclick="showHamburger()" id="open">
-            <i class="fa fa-bars"></i>
-        </button>
+        <!-- hamburger menu -->
+        <div class="nav-right" id="barsmenu">
+            <button onclick="openHamburger()"> <i class="fa-2x fa-solid fa-bars"></i></button>
+        </div>
     </nav>
 
-    <div class="container-hamburger" id="container-hamburger">
-        <a href="index.html">Home</a>
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a href="index.html" >Home</a>
         <a href="addProject.html">My Project</a>
-        <a href="contact-me.html">Contact</a>
-    </div>
+        <a href="contact-me.html" class="hamburger-active">Contact</a>
+      </div>
     <!-- end navbar -->
 
-    <form action="">
+    <form>
         <div class="container-form">
             <h1>Get in touch</h1>
 
@@ -66,12 +66,13 @@
             </div>
             <div class="phoneNumber">
                 <label for="phone-number">Phone Number
-                    <input type="text" id="phone-number" placeholder="input your phone number" value="" required>
+                    <input type="number" id="phone-number" placeholder="input your phone number" value="" required>
                 </label>
             </div>
             <div class="subject">
                 <label for="subject">Subject
                     <select name="Subject" id="subject">
+                        <option value="" hidden>please choose</option>
                         <option value="golang">golang</option>
                         <option value="c++">c++</option>
                         <option value="python">python</option>
@@ -89,8 +90,7 @@
             </div>
         </div>
     </form>
-
-    <script src="./assets/js/script.js"></script>
     <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/contactMe.js"></script>
 </body>
 </html>
