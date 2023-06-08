@@ -21,6 +21,8 @@ function getProject(e) {
   let python = document.getElementById("tech-three").checked ? tech3 : "";
   let golang = document.getElementById("tech-four").checked ? tech4 : "";
 
+
+
   //validation
   if (projectName == "") {
     return alert("Tolong isi bagian nama projek anda");
@@ -76,14 +78,15 @@ function getProject(e) {
     projectName,
     startDate,
     endDate,
-    durasi,
-    desc,
     nodeJS,
     reactJS,
     python,
     golang,
+    durasi,
+    desc,
     author: "Ilham Setyadji",
     postAt: new Date(),
+    technologies,
   };
 
   blogs.push(dataProject);
@@ -111,10 +114,7 @@ function showProject() {
                     </div>
                     <!-- technologies -->
                     <div class="tech">
-                    ${blogs[i].nodeJS}
-                    ${blogs[i].reactJS}
-                    ${blogs[i].python}
-                    ${blogs[i].golang}
+                    ${blogs[i].technologies}
                     </div>
                     <!-- end-technologies -->
                             
